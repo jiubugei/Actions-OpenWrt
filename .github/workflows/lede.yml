@@ -16,7 +16,7 @@
 
 #
 
-name: Build OpenWrt
+name: lean OpenWrt
 
 on:
 
