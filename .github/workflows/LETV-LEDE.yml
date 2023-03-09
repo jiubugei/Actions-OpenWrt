@@ -6,7 +6,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: lede
+name: LETV
 
 on:
   repository_dispatch:
