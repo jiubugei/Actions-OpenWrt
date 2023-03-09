@@ -36,9 +36,9 @@ on:
 
 env:
 
-  REPO_URL: https://github.com/coolsnowwolf/openwrt
+  REPO_URL: https://github.com/coolsnowwolf/lede
 
-  REPO_BRANCH: lede-17.01
+  REPO_BRANCH: master
 
   FEEDS_CONF: feeds.conf.default
 
