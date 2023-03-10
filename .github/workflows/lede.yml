@@ -102,9 +102,9 @@ jobs:
 
         df -hT $PWD
 
-        git clone $REPO_URL -b $REPO_BRANCH openwrt
+        git clone $REPO_URL -b $REPO_BRANCH openwrt-18.06
 
-        ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
+        ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt-18.06
 
     - name: Load custom feeds
 
@@ -114,7 +114,7 @@ jobs:
 
         chmod +x $DIY_P1_SH
 
-        cd openwrt
+        cd openwrt-18.06
 
         $GITHUB_WORKSPACE/$DIY_P1_SH
 
@@ -124,7 +124,7 @@ jobs:
 
     - name: Install feeds
 
-      run: cd openwrt && ./scripts/feeds install -a
+      run: cd openwrt-18.06 && ./scripts/feeds install -a
 
     - name: SSH connection to Actions
 
@@ -144,7 +144,7 @@ jobs:
 
       run: |
 
-        cd openwrt
+        cd openwrt-18.06
 
         make defconfig
 
@@ -160,7 +160,7 @@ jobs:
 
       run: |
 
-        cd openwrt
+        cd openwrt-18.06
 
         echo -e "$(nproc) thread compile"
 
@@ -190,7 +190,7 @@ jobs:
 
         name: OpenWrt_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
 
-        path: openwrt/bin
+        path: openwrt-18.06/bin
 
     - name: Organize files
 
@@ -200,7 +200,7 @@ jobs:
 
       run: |
 
-        cd openwrt/bin/targets/*/*
+        cd openwrt-18.06/bin/targets/*/*
 
         rm -rf packages
 
