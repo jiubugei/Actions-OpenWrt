@@ -120,7 +120,7 @@ jobs:
 
     - name: Update feeds
 
-      run: cd source && ./scripts/feeds update -a
+      run: cd source && ./scripts/feeds update -a 
 
     - name: Install feeds
 
