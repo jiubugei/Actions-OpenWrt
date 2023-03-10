@@ -36,7 +36,7 @@ on:
 
 env:
 
-  REPO_URL: https://github.com/openwrt/openwrt/tree/openwrt-18.06
+  REPO_URL: https://github.com/lede-project/source
 
   REPO_BRANCH: openwrt-18.06
 
