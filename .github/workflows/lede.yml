@@ -54,7 +54,7 @@ env:
 
   UPLOAD_WETRANSFER: false
 
-  UPLOAD_RELEASE: false
+  UPLOAD_RELEASE: true
 
   TZ: Asia/Shanghai
 
